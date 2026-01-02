@@ -1,0 +1,9 @@
+def count_elements(data):
+    counter = 0
+    for element in data:
+        counter = counter + 1
+    return counter
+
+numbers = [1, 2, 3, 4, 5]
+result = count_elements(numbers)
+print(result)

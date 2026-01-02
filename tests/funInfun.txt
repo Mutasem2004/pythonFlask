@@ -1,0 +1,36 @@
+x =  "maher"
+y = 5
+
+print(5 > 2)
+
+a = [
+    5,
+    2,
+    6
+  ]
+
+print(a)
+
+l = a[1] + 2
+
+function()
+function(x)
+function(x,1,len(m))
+function(x, 5 * 1)
+
+5 * k # problem here
+
+(5 * 9 )
+
+
+def print_number(target = 5 ):
+    print(target)
+    def print_number(target = 5 ):
+        print(target)
+        def print_number(target = 5 ):
+                print(target)
+                for val in items:
+                    total = total + val
+
+print_number()
+

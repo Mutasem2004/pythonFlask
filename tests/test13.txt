@@ -1,0 +1,81 @@
+5 + 2 + 6 * 2
+
+print("Maher Alhalaki",5,6*9)
+
+5 + 2 + 6 * 2
+
+x = 5 - 4
+
+5- 3
+
+print(x.a.b[2].fun(1,2))
+print(x[1].a.fun(1,2))
+
+maher(a,8,6)
+
+not a
+
+print(True)
+print(False,(5*2))
+
+m = [1,2,[2,3],"mm"]
+
+m[3] = 60
+
+m[3].a = 69
+
+m.a.b = 5*2
+
+if x > 5 :
+        print("maher")
+elif x <5 :
+    print("Amer")
+else :
+    print("SS")
+
+
+def multiply(a, b):
+    res = a * b
+    return res
+
+def calculate(x = 2, y):
+    temp = multiply(x, 2)
+    final = temp + y
+    return final
+
+
+l = "mm"
+dic = {
+    1 : "m" ,
+    2 : "l",
+    'mm': 44,
+    2*3 : l
+}
+
+
+x = 5
+def fun():
+    print(X)
+    print()
+    if x > 5 :
+        print("Yes")
+        return "maher"
+    elif x <5 :
+        return "Amer"
+    else :
+        return "SS"
+
+
+class A:
+    def __init__(self,x):
+        self.x = x
+
+    def maher(self,m):
+        print ("maher")
+        print(self.x)
+        print(m)
+
+
+from flask import Flask, render_template, request, redirect, url_for
+
+render_template("products.html", products=products.values())

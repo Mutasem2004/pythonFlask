@@ -1,0 +1,23 @@
+l = "mm"
+dic = {
+    1 : "m" ,
+    2 : "l",
+    'mm': 44,
+    2*3 : l
+}
+
+print(dic)
+
+set = {1,2,3}
+
+a = dic[1].v + "aher"
+
+print(dic[1].v)
+
+dic[2] = "change"
+
+print(dic[2])
+
+print(dic[1])
+
+global x

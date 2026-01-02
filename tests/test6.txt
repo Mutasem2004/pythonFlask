@@ -1,0 +1,12 @@
+a = 15
+b = 3
+# pla pla pla
+my_list = [a, b, a / b, a % b]
+
+def list_sum(lst):
+    # Hello my name is comment
+    return lst[0] + lst[1]
+
+total = list_sum(my_list)
+print(total)
+

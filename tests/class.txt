@@ -1,0 +1,17 @@
+class A:
+    def __init__(self,x):
+        self.x = x
+
+    def maher(self,m):
+        print ("maher")
+        print(self.x)
+        print(m)
+
+
+k = A(44)
+print(k.maher())
+
+print(k.g.l())
+c = 1
+print(k.l(x = 1,c))
+l = x.maherr()

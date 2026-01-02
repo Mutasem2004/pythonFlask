@@ -1,0 +1,13 @@
+def multiply(a, b):
+    res = a * b
+    return res
+
+def calculate(x, y):
+    temp = multiply(x, 2)
+    final = temp + y
+    return final
+
+value = 5
+total = calculate(value, 3)
+
+print(total)

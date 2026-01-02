@@ -1,0 +1,17 @@
+A = 10
+B = 5
+
+if A > B:
+    print("A is greater")
+    C = A - B
+    if C == 5:
+        print("C is five")
+    else:
+        print("C is not five")
+    D = C * 2
+elif B > A:
+    print("B is greater")
+else:
+    print("A equals B")
+
+print("Finished")

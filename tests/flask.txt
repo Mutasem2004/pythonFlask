@@ -1,0 +1,101 @@
+from flask import Flask, render_template, request, redirect, url_for
+import os
+from werkzeug.utils import secure_filename
+
+app = Flask(__name__)
+
+
+UPLOAD_FOLDER = 'static/uploads'
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+
+products = {
+    1: {
+        "id": 1,
+        "name": "Phone",
+        "image": "https://via.placeholder.com/300?text=Phone",
+        "price": 300,
+        "details": "Modern smartphone"
+    },
+    2: {
+        "id": 2,
+        "name": "Laptop",
+        "image": "https://via.placeholder.com/300?text=Laptop",
+        "price": 900,
+        "details": "Business laptop"
+    },
+    3: {
+        "id": 3,
+        "name": "Headphones",
+        "image": "https://via.placeholder.com/300?text=Headphones",
+        "price": 50,
+        "details": "High quality headphones"
+    },
+    4: {
+        "id": 4,
+        "name": "Camera",
+        "image": "https://via.placeholder.com/300?text=Camera",
+        "price": 450,
+        "details": "Professional camera"
+    },
+    5: {
+        "id": 5,
+        "name": "Watch",
+        "image": "https://via.placeholder.com/300?text=Watch",
+        "price": 120,
+        "details": "Smart watch"
+    }
+}
+
+next_id = 6
+
+
+@app.route("/")
+@app.route("/products")
+def show_products():
+    return render_template("products.html", products=products.values())
+
+
+@app.route("/product/<int:product_id>")
+def product_details(product_id):
+    product = products.get(product_id)
+    if not product:
+        return "Product not found"
+    return render_template("product_detail.html", product=product)
+
+@app.route("/add", methods=["GET", "POST"])
+def add_product():
+    global next_id
+
+    if request.method == "POST":
+        name = request.form["name"]
+        price = float(request.form["price"])
+        details = request.form["details"]
+
+
+        file = request.files.get("image_file")
+        if file and file.filename != "":
+            filename = secure_filename(file.filename)
+            filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+            file.save(filepath)
+            image_url = url_for('static', filename='uploads/' + filename)
+
+        else:
+            image_url = "https://via.placeholder.com/300?text=No+Image"
+
+        products[next_id] = {
+            "id": next_id,
+            "name": name,
+            "image": image_url,
+            "price": price,
+            "details": details
+        }
+
+        next_id = next_id +1
+        return redirect(url_for("show_products"))
+
+    return render_template("add_product.html")
+
+if __name__ == "__main__":
+    app.run(debug=True)

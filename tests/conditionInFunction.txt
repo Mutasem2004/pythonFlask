@@ -1,0 +1,24 @@
+x = 5
+def fun():
+    print(X)
+    print()
+    if x > 5 :
+        print("Yes")
+        return "maher"
+    elif x <5 :
+        return "Amer"
+    else :
+        return "SS"
+
+if x > 5 :
+        print("maher")
+elif x <5 :
+    print("Amer")
+else :
+    print("SS")
+
+
+False
+
+
+_m__ = 4

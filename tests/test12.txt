@@ -1,0 +1,19 @@
+def test(x):
+    print(x)
+
+test = "mm"
+test(5)
+
+
+def product_detail(pid):
+    global gl
+    gl = 5
+    for p in products:
+        if p["id"] == pid:
+            return render_template("detail.html", product=p)
+    return "product not exist" ,test,1
+
+print(gl)
+
+test.a.b = 5
+

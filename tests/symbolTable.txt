@@ -1,0 +1,17 @@
+y = 3
+x = 5 + y
+
+p = 5 + r
+
+def maher(i):
+    l = 8 + y
+    print(l)
+
+print(z)
+
+maher(y)
+
+
+maher(l)
+test1()
+

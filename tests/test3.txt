@@ -1,0 +1,11 @@
+x = 2
+y = 10
+z = 3
+
+result_math = 5 + 4 * x ** 3 % 7
+result_logic = (y > 9 and z < 5) or (x == 5)
+final_check = result_math > 10 and result_logic
+
+print(result_math)
+print(result_logic)
+print(final_check)
